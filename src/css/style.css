@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-container-left: #F3FFF2;
+    --form-email: #F7fAFC;
+    --box-login: #1E9E6A;
+    --box-register: #1A202C;
+    --text-form: #656769;
+    --color-primary: #E8E8E8;
+    --color-background: #FFFFFF;
+}
+
+.container {
+    background: var(--color-background);
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+}
+
+.imagem-ilustrativa {
+    align-items: center;
+    background: var(--color-container-left);
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    position: absolute;
+    width: 758px;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+.login-form {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    width: 770px;
+    height: 100vh;
+    left: 758px;
+    top: 0px;
+}
+
+.login-form .conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 24px;
+    height: 614px;
+    width: 400px;
+
+    /* Inside auto layout*/
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.conteudo .container-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    width: 400px;
+    height: 528px;
+
+    /* Inside auto layout*/
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.container-frame .titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 344px;
+    height: 69px;
+}
+
+.container-frame .titulo h3 {
+    font-family: 'Arquivo', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 22px;
+    color: var(--box-register);
+}
+
+.container-frame .titulo h2 {
+    color: var(--box-register);
+    font-family: 'Arquivo', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    height: 35px;
+    line-height: 35px;
+    width: 344px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: self-start;
+    gap: 46px;
+    padding: 0px;
+    width: 400px;
+    height: 419px;
+}
+
+.formulario .grupo-label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    height: 235px;
+    width: 400px;
+}
+
+.grupo-label .grupo-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 400px;
+    height: 194px;
+}
+
+.grupo-inputs input {
+    align-items: center;
+    background: var(--form-email);
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    height: 49px;
+    margin-top: -20px;
+    padding: 16px;
+    width: 400px;
+}
+
+.grupo-inputs label {
+    color: var(--box-register);
+    font-family: 'Arquivo', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    height: 20px;
+    width: 52px;
+}
+
+.formulario .options {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Arquivo', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 17px;
+    color: var(--box-register);
+    gap: 5px;
+    height: 17px;
+    width: 400px;
+}
+
+.options a {
+    color: var(--box-login);
+    font-family: 'Arquivo', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 17px;
+    text-align: right;
+    margin: 0 0 0 auto;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.botao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    height: 128px;
+    width: 400px;
+}
+
+.btn-login,
+.btn-google {
+    background: var(--box-login);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Arquivo', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    color: var(--color-background);
+    justify-content: center;
+    padding: 16px 32px;
+    text-align: center;
+    gap: 12px;
+    height: 52px;
+    width: 400px;
+}
+
+.btn-google {
+    background: var(--box-register);
+}
+
+.btn-login:hover,
+.btn-google:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.login-form .conteudo p {
+    color: var(--box-register);
+    font-family: 'Arquivo', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    width: 302px;
+}
+
+.login-form .conteudo a {
+    color: var(--box-login);
+}
