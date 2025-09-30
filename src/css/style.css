@@ -10,225 +10,151 @@
     --color-background: #FFFFFF;
 }
 
-.container {
+body {
+    margin: 0;
+    font-family: "Archivo", sans-serif;
     background: var(--color-background);
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    max-width: 100%;
 }
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+/* ==== Coluna da imagem ==== */
 
 .imagem-ilustrativa {
-    align-items: center;
     background: var(--color-container-left);
     display: flex;
-    flex-direction: row;
-    gap: 10px;
+    max-width: 80%;
     justify-content: center;
-    position: absolute;
-    width: 758px;
-    height: 100vh;
-    left: 0px;
-    top: 0px;
+    align-items: center;
+    height: auto;
 }
 
+/* ==== Coluna do formulário ==== */
 .login-form {
-    align-items: center;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    position: absolute;
-    width: 770px;
-    height: 100vh;
-    left: 758px;
-    top: 0px;
-}
-
-.login-form .conteudo {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 0px;
-    gap: 24px;
-    height: 614px;
-    width: 400px;
-
-    /* Inside auto layout*/
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+    padding: 2rem;
 }
 
-.conteudo .container-frame {
+.conteudo {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 40px;
-    width: 400px;
-    height: 528px;
-
-    /* Inside auto layout*/
-    flex: none;
-    order: 0;
-    flex-grow: 0;
+    max-width: 400px;
+    width: 100%;
+    gap: 5rem;
 }
 
-.container-frame .titulo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-    width: 344px;
-    height: 69px;
-}
-
-.container-frame .titulo h3 {
-    font-family: 'Arquivo', sans-serif;
+.titulo h3 {
     font-weight: 500;
     font-size: 20px;
     line-height: 22px;
     color: var(--box-register);
+    padding-bottom: 1.5rem;
 }
 
-.container-frame .titulo h2 {
+.titulo h2 {
     color: var(--box-register);
-    font-family: 'Arquivo', sans-serif;
     font-weight: 600;
     font-size: 30px;
-    height: 35px;
-    line-height: 35px;
-    width: 344px;
+    padding-bottom: 0px;
 }
 
 .formulario {
+
     display: flex;
     flex-direction: column;
-    align-items: self-start;
-    gap: 46px;
-    padding: 0px;
-    width: 400px;
-    height: 419px;
+    gap: 1rem;
 }
 
-.formulario .grupo-label {
+.grupo-inputs {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
-    height: 235px;
-    width: 400px;
-}
-
-.grupo-label .grupo-inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    width: 400px;
-    height: 194px;
-}
-
-.grupo-inputs input {
-    align-items: center;
-    background: var(--form-email);
-    border: 1px solid var(--color-primary);
-    border-radius: 4px;
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-    height: 49px;
-    margin-top: -20px;
-    padding: 16px;
-    width: 400px;
+    gap: 1rem;
+    margin-top: -40px;
 }
 
 .grupo-inputs label {
     color: var(--box-register);
-    font-family: 'Arquivo', sans-serif;
-    font-weight: 400;
     font-size: 18px;
-    line-height: 20px;
-    height: 20px;
-    width: 52px;
+    margin-bottom: -12px;
 }
 
-.formulario .options {
+.grupo-inputs input {
+    background: var(--form-email);
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.options {
     display: flex;
-    flex-direction: row;
-    font-family: 'Arquivo', sans-serif;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 17px;
-    color: var(--box-register);
-    gap: 5px;
-    height: 17px;
-    width: 400px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    height: 1.6rem;
 }
 
 .options a {
     color: var(--box-login);
-    font-family: 'Arquivo', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 17px;
-    text-align: right;
-    margin: 0 0 0 auto;
-    /* Inside auto layout */
-    flex: none;
-    order: 1;
-    flex-grow: 0;
+    text-decoration: none;
+    height: 17px;
 }
 
-.botao {
+.botoes {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 24px;
-    height: 128px;
-    width: 400px;
+    margin-top: 2.5rem;
 }
 
 .btn-login,
 .btn-google {
     background: var(--box-login);
     border-radius: 4px;
-    display: flex;
-    flex-direction: row;
-    font-family: 'Arquivo', sans-serif;
     font-weight: 600;
-    font-size: 18px;
-    line-height: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    height: 3rem;
+}
+
+.btn-login {
+    background: var(--box-login);
     color: var(--color-background);
-    justify-content: center;
-    padding: 16px 32px;
-    text-align: center;
-    gap: 12px;
-    height: 52px;
-    width: 400px;
 }
 
 .btn-google {
     background: var(--box-register);
+    color: var(--color-background);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-google img {
+    height: 24px;
 }
 
 .btn-login:hover,
 .btn-google:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out;
+    transform: scale(1.05);
 }
 
-.login-form .conteudo p {
-    color: var(--box-register);
-    font-family: 'Arquivo', sans-serif;
-    font-weight: 500;
+.conteudo p {
     font-size: 20px;
-    height: 22px;
-    line-height: 22px;
     text-align: center;
-    width: 302px;
+    margin-top: -1.2rem;
 }
 
-.login-form .conteudo a {
+.conteudo a {
     color: var(--box-login);
+    text-decoration: none;
+    font-weight: 500;
 }

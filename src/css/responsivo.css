@@ -1,271 +1,46 @@
 @media (max-width: 768px) {
+    html,
+    body {
+        height: 100%;
+    }
+
     .container {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-        overflow: hidden;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        /* 1 coluna apenas */
+        justify-items: center !important;
+        /* centraliza horizontal */
+        align-items: center !important;
+        /* centraliza vertical */
+        min-height: 100vh !important;
+        width: 100% !important;
+        padding: 0 16px !important;
+        box-sizing: border-box !important;
+        margin: 0 !important;
+    }
+    /* garante que a imagem não ocupe espaço algum */
+    .imagem-ilustrativa {
+        display: none !important;
     }
 
-    .container .imagem-ilustrativa {
-        display: none;
-        /* Esconde a imagem para telas menores */
-    }
-
+    /* centraliza o bloco do formulário */
     .login-form {
-        max-width: 400px;
-        margin: 30px 0 0 170px;
-        width: 100%;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
     }
 
     .conteudo {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        gap: 54px;
-        height: 614px;
-        margin-top: -10px;
-        margin-left: -1545px;
-        padding: 5px;
-        width: 400px;
+        width: 100% !important;
+        max-width: 420px !important;
+        /* ajuste aqui se quiser maior/menor */
+        margin: 0 auto !important;
+        padding: 20px !important;
+        box-sizing: border-box !important;
     }
 
-    .conteudo .container-frame {
-        align-items: flex-start;
-        gap: 40px;
-        height: 528px;
-        padding: 0px;
-        width: 400px;
-    }
-
-    .conteudo .container-frame .titulo h3 {
-        font-size: 16px;
-        line-height: 18px;
-    }
-
-    .conteudo .container-frame .titulo h2 {
-        font-weight: 600;
-        font-size: 23px;
-        line-height: 28px;
-    }
-
-    .formulario .grupo-label {
-        display: flex;
-        flex-direction: column;
-        gap: 2px;
-        margin-top: -10px;
-    }
-
-    .grupo-label .grupo-inputs label {
-        font-size: 15px;
-        line-height: 18px;
-        margin-bottom: -5px;
-    }
-
-    .conteudo .options label,
-    .conteudo .options a {
-        font-size: 15px;
-    }
-
-    .botao {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        height: 128px;
-        margin-top: -20px;
-        width: 400px;
-    }
-
-    .container .login-form .conteudo p {
-        display: flex;
-        font-size: 16px;
-        height: 25px;
-        justify-content: space-evenly;
-        padding: 4px;
-        margin-top: -24px;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        display: flex;
-        height: auto;
-        left: 45px;
-        max-width: 100%;
-        margin: 0 auto;
-        position: relative;
-        width: 480px;
-    }
-
-    .login-form {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        gap: 74px;
-        height: 100%;
-        margin: 80px 0 0 70px;
-        padding: 0px;
-    }
-
-    .conteudo .container-frame .titulo h3 {
-        font-size: 14px;
-        line-height: 17px;
-    }
-
-    .container .container-frame .titulo h2 {
-        font-size: 18px;
-        font-weight: 600;
-        height: 26px;
-        line-height: 26px;
-        width: 327px;
-    }
-
-    .container .formulario {
-        align-items: flex-start;
-        display: flex;
-        flex-direction: column;
-        gap: 56px;
-        height: 394px;
-        margin-top: -10px;
-        padding: 0px;
-        width: 327px;
-
-        /* Inside auto layout */
-        align-self: stretch;
-        flex: none;
-        flex-grow: 0;
-        order: 1;
-    }
-
-    .formulario .grupo-label {
-        gap: 8px;
-        height: 49px;
-        padding: 0px;
-        margin-top: -25px;
-        width: 320px;
-    }
-
-    .formulario .grupo-inputs {
-        align-items: flex-start;
-        display: flex;
-        flex-direction: column;
-        padding: 0px;
-        height: 184px;
-        width: 327px;
-
-        /* Inside auto layout */
-        align-self: stretch;
-        flex: none;
-        flex-grow: 0;
-        order: 0;
-    }
-
-    .formulario .grupo-inputs input {
-        background: #F7FAFC;
-        border: 1px solid #E8E8E8;
-        border-radius: 4px;
-        height: 40px;
-        margin-top: -22px;
-        width: 290px;
-    }
-
-    .formulario .grupo-inputs label {
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 15px;
-        height: 15px;
-        margin: -5px 0 0 2px;
-        width: 41px;
-    }
-
-    .grupo-label .options {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        height: 16px;
-        gap: 11px;
-        justify-content: space-between;
-        margin-top: -48px;
-        width: 250px;
-
-        /* Inside auto layout */
-        align-self: stretch;
-        flex: none;
-        flex-grow: 0;
-        order: 1;
-        
-    }
-
-    .formulario .grupo-label .options label {
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 18px;
-        margin-left: 2px;
-    }
-
-    .formulario .grupo-label .options a {
-        font-weight: 500;
-        font-size: 12px;
-        height: 15px;
-        line-height: 15px;
-        margin: 0px auto;
-        margin-left: 45px;
-        width: 140px;
-    }
-
-    .botao {
-        align-items: flex-start;
-        align-self: stretch;
-        display: flex;
-        gap: 24px;
-        flex-direction: column;
-        flex: none;
-        flex-grow: 0;
-        height: 112px;
-        order: 1;
-        margin-top: -75px;
-        padding: 0;
-        width: 327px;
-    }
-
-    .botao .btn-login,
-    .botao .btn-google {
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        gap: 8px;
-        justify-content: center;
-        font-weight: 600;
-        font-size: 13px;
-        height: 40px;
-        line-height: 14px;
-        padding: 1px 2px;
-        width: 294px;
-        text-align: center;
-
-        /* Inside auto layout */
-        flex: none;
-        order: 0;
-        align-self: stretch;
-        flex-grow: 0;
-    }
-
-    .container .login-form .conteudo p {
-        align-items: center;
-        font-weight: 500;
-        font-size: 14px;
-        height: 17px;
-        line-height: 17px;
-        text-align: center;
-        margin: -115px 0 0 -105px;
-        width: 280px;
-    }
-
-    .login-form .conteudo a {
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 17px;
-        text-align: center;
-        padding-left: 10px;
-    }
 }
