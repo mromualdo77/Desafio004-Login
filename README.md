@@ -9,11 +9,31 @@ Este é um projeto de **Página de Login Responsiva**, desenvolvido com **HTML e
 - **Flexbox**: Layout dinâmico e alinhamento
 - **Media Queries**: Adaptação para telas menores
 
+  
+## Estrutura do Projeto
+
+```
+index.html
+src/
+  css/
+    reset.css
+    responsivo.css
+    style.css
+  imagem/
+    image.svg
+    logogoogle.png
+```
+
 ## 📌 Funcionalidades
 
 ✅ Layout responsivo para **desktop, tablet e mobile**  
 ✅ Formulário de login com **campos obrigatórios**  
 ✅ Opção de login via **Google**  
 ✅ Design minimalista e moderno  
+
+## Créditos
+
+Desenvolvido por Maria Romualdo para o Codelab.
+
 
 
